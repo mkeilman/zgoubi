@@ -7,7 +7,8 @@ FFLAGS=-O4 -Wall -fno-automatic -pedantic -cpp
 
 .PHONY: common guide modules zgoubi zpop
 
-.DEFAULT_GOAL := zgoubi
+zgoubi : modules
+	$(MAKE) -C zgoubi $(MFLAGS) CFLAGS="$(CFLAGS)" FC="$(FC)" FFLAGS="$(FFLAGS)"
 
 all: build guide
 
@@ -21,9 +22,6 @@ guide :
 
 modules : common
 	$(MAKE) -C modules $(MFLAGS) CFLAGS="$(CFLAGS)" FC="$(FC)" FFLAGS="$(FFLAGS)" 
-
-zgoubi : modules
-	$(MAKE) -C zgoubi $(MFLAGS) CFLAGS="$(CFLAGS)" FC="$(FC)" FFLAGS="$(FFLAGS)"
 
 zpop : modules
 	$(MAKE) -C zpop $(MFLAGS) CFLAGS="$(CFLAGS)" FC="$(FC)" FFLAGS="$(FFLAGS)"
