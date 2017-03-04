@@ -7,6 +7,8 @@ FFLAGS=-O4 -Wall -fno-automatic -pedantic -cpp
 
 .PHONY: common guide modules zgoubi zpop
 
+.DEFAULT_GOAL := zgoubi
+
 all: build guide
 
 build : zgoubi zpop
