@@ -10,7 +10,7 @@ The example sub-folders found in exemple have the similar following content :
 - or just one or more result files (suffix ".res")
 
 Zgoubi needs a zgoubi.dat as input file. That zgoubi.dat is obtained by copy-pasting 'thisExampleDataFile.dat' or 'thisExampleDataFile.res' file in that folder, to zgoubi.dat. (that works with a .res file since the first part of a '.res' zgoubi result file is a copy of the zgoubi.dat file that it stems from).  
-Note that Zgoubi, instead, also accepts the command 'zgoubi -inFile thisExampleDataFile.dat/.res. 
+Note that Zgoubi, instead, also accepts the command 'zgoubi -[fileIn | in] thisExampleDataFile.dat/.res. 
 
 Some of these examples are discussed in Part C of the users' guide. 
 
